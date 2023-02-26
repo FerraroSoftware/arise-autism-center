@@ -1,29 +1,28 @@
 import Image from "next/image";
-import mike from "../public/mike.png";
 
 const people = [
   {
     name: "Sebnem Aras",
     role: "Founder",
-    imageUrl: { mike },
+    imageUrl: "/mike.png",
     bio: "As the founder of Arise Autism, Sebnem Aras brings a wealth of knowledge and expertise to our center, and her commitment to making a difference in the lives of those with autism is truly inspiring.",
   },
   {
     name: "Sebnem Aras",
     role: "Founder",
-    imageUrl: { mike },
+    imageUrl: "/mike.png",
     bio: "As the founder of Arise Autism, Sebnem Aras brings a wealth of knowledge and expertise to our center, and her commitment to making a difference in the lives of those with autism is truly inspiring.",
   },
   {
     name: "Sebnem Aras",
     role: "Founder",
-    imageUrl: { mike },
+    imageUrl: "/mike.png",
     bio: "As the founder of Arise Autism, Sebnem Aras brings a wealth of knowledge and expertise to our center, and her commitment to making a difference in the lives of those with autism is truly inspiring.",
   },
   {
     name: "Sebnem Aras",
     role: "Founder",
-    imageUrl: { mike },
+    imageUrl: "/mike.png",
     bio: "As the founder of Arise Autism, Sebnem Aras brings a wealth of knowledge and expertise to our center, and her commitment to making a difference in the lives of those with autism is truly inspiring.",
   },
   // More people...
@@ -77,6 +76,8 @@ export default function Example() {
               <Image
                 className="aspect w-52 flex-none rounded-2xl object-cover"
                 src={person.imageUrl}
+                width={300}
+                height={300}
                 alt="employee"
               />
               <div className="flex-auto">
