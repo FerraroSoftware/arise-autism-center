@@ -1,26 +1,29 @@
+import Image from "next/image";
+import mike from "../public/mike.png";
+
 const people = [
   {
     name: "Sebnem Aras",
     role: "Founder",
-    imageUrl: "/mikey.png",
+    imageUrl: { mike },
     bio: "As the founder of Arise Autism, Sebnem Aras brings a wealth of knowledge and expertise to our center, and her commitment to making a difference in the lives of those with autism is truly inspiring.",
   },
   {
     name: "Sebnem Aras",
     role: "Founder",
-    imageUrl: "/mikey.png",
+    imageUrl: { mike },
     bio: "As the founder of Arise Autism, Sebnem Aras brings a wealth of knowledge and expertise to our center, and her commitment to making a difference in the lives of those with autism is truly inspiring.",
   },
   {
     name: "Sebnem Aras",
     role: "Founder",
-    imageUrl: "/mikey.png",
+    imageUrl: { mike },
     bio: "As the founder of Arise Autism, Sebnem Aras brings a wealth of knowledge and expertise to our center, and her commitment to making a difference in the lives of those with autism is truly inspiring.",
   },
   {
     name: "Sebnem Aras",
     role: "Founder",
-    imageUrl: "/mikey.png",
+    imageUrl: { mike },
     bio: "As the founder of Arise Autism, Sebnem Aras brings a wealth of knowledge and expertise to our center, and her commitment to making a difference in the lives of those with autism is truly inspiring.",
   },
   // More people...
@@ -71,10 +74,10 @@ export default function Example() {
         >
           {people.map((person) => (
             <li key={person.name} className="flex flex-col gap-6 xl:flex-row">
-              <img
+              <Image
                 className="aspect w-52 flex-none rounded-2xl object-cover"
                 src={person.imageUrl}
-                alt=""
+                alt="employee"
               />
               <div className="flex-auto">
                 <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900">

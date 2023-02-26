@@ -6,6 +6,8 @@ import {
   UserGroupIcon,
   BookOpenIcon,
 } from "@heroicons/react/20/solid";
+import Image from "next/image";
+import happy from "../public/happy.png";
 
 const features = [
   {
@@ -64,9 +66,9 @@ export default function Example() {
             </div>
           </div>
           <div className="flex items-start justify-end lg:order-first">
-            <img
-              src="/happy.png"
-              alt="Product screenshot"
+            <Image
+              src={happy}
+              alt="happy"
               className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
               width={2432}
               height={1442}

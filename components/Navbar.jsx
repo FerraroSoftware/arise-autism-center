@@ -1,6 +1,8 @@
 import { Fragment, useState } from "react";
 import Link from "next/link";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
+import Image from "next/image";
+import ariselogo from "@/public/arise-logo.svg";
 import {
   ArrowPathIcon,
   Bars3Icon,
@@ -87,7 +89,7 @@ export default function Example() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5">
             <span className="sr-only">Your Company</span>
-            <img className="h-16 w-auto" src="/arise-logo.svg" alt="" />
+            <Image className="h-16 w-auto" src={ariselogo} alt="ariselogo" />
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -225,12 +227,8 @@ export default function Example() {
         >
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=purple&shade=600"
-                alt=""
-              />
+              <span className="sr-only">Arise Autism center</span>
+              <Image className="h-8 w-auto" src={ariselogo} alt="arise logo" />
             </a>
             <button
               type="button"

@@ -1,4 +1,5 @@
-import React from "react";
+import Image from "next/image";
+import contactus from "../public/contact-us.png";
 
 export default function contact() {
   return (
@@ -14,7 +15,7 @@ export default function contact() {
           <p className="mt-6 text-lg leading-8 text-gray-600">
             Our team of dedicated professionals will work with you every step of
             the way to provide tailored support and services that meet your
-            child's unique needs.
+            child&apos;s unique needs.
           </p>
         </div>
       </div>
@@ -22,17 +23,17 @@ export default function contact() {
       {/* contact */}
       <div className="relative bg-white">
         <div className="lg:absolute lg:inset-0 lg:left-1/2">
-          <img
+          <Image
             className="h-64 w-full bg-gray-50 object-cover sm:h-80 lg:absolute lg:h-full"
-            src="/contact-us.png"
-            alt=""
+            src={contactus}
+            alt="contact us today"
           />
         </div>
         <div className="pt-16 pb-24 sm:pt-24 sm:pb-32 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32">
           <div className="px-6 lg:px-8">
             <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900">
-                Let's work together
+                Let&apos;s work together
               </h2>
               <p className="mt-2 text-lg leading-8 text-gray-600">
                 Fill out the form below, and we will be in touch soon. We look
@@ -160,9 +161,9 @@ export default function contact() {
               Submit your application today.
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
-              Apply today and take the first step towards unlocking your child's
-              full potential. Together, we can help your child thrive and reach
-              their goals.
+              Apply today and take the first step towards unlocking your
+              child&apos;s full potential. Together, we can help your child
+              thrive and reach their goals.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a

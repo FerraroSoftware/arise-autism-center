@@ -1,3 +1,5 @@
+import Image from "next/image";
+import ariselogo from "../public/arise-logo.svg";
 const navigation = {
   solutions: [
     { name: "Home ABA Services", href: "#" },
@@ -94,7 +96,7 @@ export default function Example() {
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
-            <img className="h-12" src="/arise-logo.svg" alt="Company name" />
+            <Image className="h-14 w-auto" src={ariselogo} alt="Logo" />
             <p className="text-sm leading-6 text-gray-600">
               Providing high-quality behavioral services for individuals and
               their families.

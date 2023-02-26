@@ -1,11 +1,13 @@
 import Link from "next/link";
+import Image from "next/image";
+import autismcenter from "@/public/arise-autism-center.png";
 
 export default function Hero() {
   return (
     <div className="relative isolate overflow-hidden bg-gray-900">
-      <img
-        src="/arise-autism-center.png"
-        alt=""
+      <Image
+        src={autismcenter}
+        alt="arise autism center"
         className="absolute inset-0 -z-10 h-full w-full object-cover opacity-50"
       />
 
@@ -22,12 +24,12 @@ export default function Hero() {
               learn and grow.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
+              <Link
                 href="/enrollment-form"
                 className="rounded-full bg-g600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-g500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-450"
               >
                 Start Application
-              </a>
+              </Link>
               <Link
                 href="#corevalues"
                 className="text-base font-semibold leading-7 text-white"

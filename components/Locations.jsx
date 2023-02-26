@@ -15,8 +15,8 @@ export default function Example() {
             </h2>
             <div className="mt-3">
               <p className="text-lg text-gray-500">
-                Nullam risus blandit ac aliquam justo ipsum. Quam mauris
-                volutpat massa dictumst amet. Sapien tortor lacus arcu.
+                We are near you in Orlando Florida. Come visit us at our Lake
+                Mary Autism Center. Give us a call or send us an email.
               </p>
             </div>
             <div className="mt-9">
@@ -62,8 +62,8 @@ export default function Example() {
             </h2>
             <div className="mt-3">
               <p className="text-lg text-gray-500">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni,
-                repellat error corporis doloribus similique.
+                Stop searching for autism centers near me. We are here to help
+                your family. Apply today and start your journey.
               </p>
             </div>
             <div className="mt-9">

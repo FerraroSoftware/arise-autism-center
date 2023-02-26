@@ -1,4 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
+import damaris from "@/public/damaris.png";
+import speech from "@/public/speech.png";
+
 export default function Example() {
   return (
     <div className="overflow-hidden bg-white py-24 sm:py-32">
@@ -34,9 +38,9 @@ export default function Example() {
                   </p>
                 </blockquote>
                 <figcaption className="mt-6 flex gap-x-4 text-sm leading-6">
-                  <img
-                    src="/damaris.png"
-                    alt=""
+                  <Image
+                    src={damaris}
+                    alt="review"
                     className="h-6 w-6 flex-none rounded-full"
                   />
                   <div>
@@ -49,9 +53,9 @@ export default function Example() {
               </figure>
             </div>
           </div>
-          <img
-            src="/speech.png"
-            alt="Product screenshot"
+          <Image
+            src={speech}
+            alt="Speech"
             className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:ml-0"
             width={2432}
             height={1442}

@@ -1,4 +1,8 @@
 import React from "react";
+import centerbased from "../public/center-based-therapy.png";
+import homebased from "../public/home-base-therapy.png";
+import early from "../public/early-intervention.png";
+import Image from "next/image";
 
 export default function Learnmore() {
   return (
@@ -19,10 +23,10 @@ export default function Learnmore() {
         <div className="grid max-w-md grid-cols-1 gap-5 mx-auto mt-16 text-center lg:grid-cols-3 lg:max-w-none">
           <div className="relative overflow-hidden transition-all duration-200 border rounded-lg border-neutral hover:bg-dark-gray group">
             <div className="overflow-hidden aspect-w-16 aspect-h-9">
-              <img
+              <Image
                 className="object-cover w-full h-full transition-all duration-300 transform group-hover:scale-110"
-                src="/center-based-therapy.png"
-                alt=""
+                src={centerbased}
+                alt="center based therapy"
               />
             </div>
             <div className="p-6 xl:px-8 xl:py-6">
@@ -61,10 +65,10 @@ export default function Learnmore() {
 
           <div className="relative overflow-hidden transition-all duration-200 border rounded-lg border-neutral hover:bg-dark-gray group">
             <div className="overflow-hidden aspect-w-16 aspect-h-9">
-              <img
+              <Image
                 className="object-cover w-full h-full transition-all duration-300 transform group-hover:scale-125"
-                src="/home-base-therapy.png"
-                alt=""
+                src={homebased}
+                alt="home based therapy"
               />
             </div>
             <div className="p-6 xl:px-8 xl:py-6">
@@ -103,10 +107,10 @@ export default function Learnmore() {
 
           <div className="relative overflow-hidden transition-all duration-200 border rounded-lg border-neutral hover:bg-dark-gray group">
             <div className="overflow-hidden aspect-w-16 aspect-h-9">
-              <img
+              <Image
                 className="object-cover w-full h-full transition-all duration-300 transform group-hover:scale-125"
-                src="/early-intervention.png"
-                alt=""
+                src={early}
+                alt="early intervention"
               />
             </div>
             <div className="p-6 xl:px-8 xl:py-6">
