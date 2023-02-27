@@ -5,6 +5,25 @@ import {
   DocumentIcon,
   HomeIcon,
 } from "@heroicons/react/24/outline";
+import { motion } from "framer-motion";
+
+const cardVariants = {
+  offscreen: {
+    opacity: 0.2,
+    scale: 1,
+    y: 60,
+  },
+  onscreen: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 1.4,
+      ease: [0, 0.31, 0.5, 1.01],
+    },
+    delay: 0,
+    y: 0,
+  },
+};
 
 const features = [
   {
@@ -22,7 +41,7 @@ const features = [
     icon: UsersIcon,
   },
   {
-    name: "Family and Community",
+    name: "Home ABA Therapy",
     description:
       "Our autism center recognizes the importance of family and community support in the treatment and management of autism and provides resources and services to empower families and promote community understanding and acceptance.",
     href: "#",
@@ -47,7 +66,14 @@ export default function Example() {
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
             {features.map((feature) => (
-              <div key={feature.name} className="flex flex-col">
+              <motion.div
+                key={feature.name}
+                className="flex flex-col"
+                viewport={{ once: true }}
+                initial="offscreen"
+                whileInView="onscreen"
+                variants={cardVariants}
+              >
                 <dt className="text-base font-semibold leading-7 text-gray-900">
                   <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-purple-500">
                     <feature.icon
@@ -68,7 +94,7 @@ export default function Example() {
                     </a>
                   </p>
                 </dd>
-              </div>
+              </motion.div>
             ))}
           </dl>
         </div>

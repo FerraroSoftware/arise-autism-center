@@ -1,10 +1,35 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+const cardVariants = {
+  offscreen: {
+    opacity: 0.2,
+    scale: 1,
+    y: 60,
+  },
+  onscreen: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 1.4,
+      ease: [0, 0.31, 0.5, 1.01],
+    },
+    delay: 0,
+    y: 0,
+  },
+};
 
 export default function Example() {
   return (
     <div className="relative isolate overflow-hidden bg-[#5FA735]">
       <div className="py-24 px-6 sm:px-6 sm:py-32 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
+        <motion.div
+          className="mx-auto max-w-2xl text-center"
+          viewport={{ once: true }}
+          initial="offscreen"
+          whileInView="onscreen"
+          variants={cardVariants}
+        >
           <h2 className="text-4xl font-bold tracking-tight text-white">
             Center-Based Services.
             <br />
@@ -28,7 +53,7 @@ export default function Example() {
               Learn more <span aria-hidden="true">→</span>
             </Link>
           </div>
-        </div>
+        </motion.div>
       </div>
       <svg
         viewBox="0 0 1024 1024"

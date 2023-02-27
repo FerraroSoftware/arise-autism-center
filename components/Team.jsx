@@ -1,4 +1,23 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+const cardVariants = {
+  offscreen: {
+    opacity: 0.2,
+    scale: 1,
+    y: 60,
+  },
+  onscreen: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 1.4,
+      ease: [0, 0.31, 0.5, 1.01],
+    },
+    delay: 0,
+    y: 0,
+  },
+};
 
 const people = [
   {
@@ -31,31 +50,6 @@ const people = [
 export default function Example() {
   return (
     <div className="bg-white py-24 sm:py-32 relative">
-      {/* <div className="absolute inset-x-0 left-[calc(70%-20rem)] top-[-10rem]  transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
-        <svg
-          className="relative left-1/2 -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-40rem)] sm:h-[42.375rem]"
-          viewBox="0 0 1155 678"
-        >
-          <path
-            fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)"
-            fillOpacity=".3"
-            d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
-          />
-          <defs>
-            <linearGradient
-              id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533"
-              x1="1155.49"
-              x2="-78.208"
-              y1=".177"
-              y2="474.645"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#9089FC" />
-              <stop offset={1} stopColor="#FF80B5" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div> */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl sm:text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -72,7 +66,14 @@ export default function Example() {
           className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-8 xl:max-w-none"
         >
           {people.map((person) => (
-            <li key={person.name} className="flex flex-col gap-6 xl:flex-row">
+            <motion.li
+              key={person.name}
+              className="flex flex-col gap-6 xl:flex-row"
+              viewport={{ once: true }}
+              initial="offscreen"
+              whileInView="onscreen"
+              variants={cardVariants}
+            >
               <Image
                 className="aspect w-52 flex-none rounded-2xl object-cover"
                 src={person.imageUrl}
@@ -91,7 +92,7 @@ export default function Example() {
                   {person.bio}
                 </p>
               </div>
-            </li>
+            </motion.li>
           ))}
         </ul>
       </div>

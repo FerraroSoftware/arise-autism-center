@@ -22,44 +22,46 @@ import {
   BuildingLibraryIcon,
   ChartBarIcon,
   BookOpenIcon,
+  DocumentIcon,
+  ChatBubbleBottomCenterIcon,
 } from "@heroicons/react/20/solid";
 
 const products = [
   {
-    name: "Home ABA Services",
+    name: "Home ABA Therapy",
     description: "ABA therapy at home for autism.",
     href: "#",
     icon: HomeIcon,
   },
   {
-    name: "Community ABA Services",
+    name: "FBA Treatment Plan",
     description: "ABA therapy in the community.",
+    href: "#",
+    icon: DocumentIcon,
+  },
+  {
+    name: "Center-Based ABA Therapy",
+    description: "Comprehensive psychological assessments.",
+    href: "#",
+    icon: ChatBubbleBottomCenterIcon,
+  },
+  {
+    name: "Early Intervention",
+    description: "Functional assessments to identify behavior's.",
     href: "#",
     icon: UsersIcon,
   },
   {
-    name: "Psychological Assessments",
-    description: "Comprehensive psychological assessments.",
-    href: "#",
-    icon: LightBulbIcon,
-  },
-  {
-    name: "Functional Assessments",
-    description: "Functional assessments to identify behavior's.",
+    name: "Functional Behavior Assessments",
+    description: "Consultation services for school districts.",
     href: "#",
     icon: ChartBarIcon,
   },
   {
-    name: "School Consultation",
-    description: "Consultation services for school districts.",
-    href: "#",
-    icon: BuildingLibraryIcon,
-  },
-  {
-    name: "Community Trainings",
+    name: "Understanding Autism",
     description: "Trainings on evidence-based interventions.",
     href: "#",
-    icon: ArrowPathIcon,
+    icon: LightBulbIcon,
   },
 ];
 const callsToAction = [
@@ -67,9 +69,12 @@ const callsToAction = [
   { name: "Call Us Now", href: "#", icon: PhoneIcon },
 ];
 const company = [
-  { name: "Our Value", href: "#" },
+  { name: "Enrollment Form", href: "#" },
+  { name: "Mission Statement", href: "#" },
+  { name: "Insurances Accepted", href: "#" },
+  { name: "Contact", href: "/contact" },
   { name: "FAQ", href: "/autism-faqs" },
-  { name: "Contact Us", href: "/contact" },
+  { name: "Useful Links", href: "#" },
   { name: "Careers", href: "#" },
 ];
 
@@ -88,7 +93,7 @@ export default function Example() {
       >
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5">
-            <span className="sr-only">Your Company</span>
+            <span className="sr-only">Arise Autism Center</span>
             <Image className="h-16 w-auto" src={ariselogo} alt="ariselogo" />
           </Link>
         </div>
@@ -170,12 +175,12 @@ export default function Example() {
             Autism ABA
           </a>
           <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Resources
+            About Us
           </a>
 
           <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
-              Company
+              Parent Resources
               <ChevronDownIcon
                 className="h-5 w-5 flex-none text-gray-400"
                 aria-hidden="true"

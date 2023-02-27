@@ -8,6 +8,25 @@ import {
 } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import happy from "../public/happy.png";
+import { motion } from "framer-motion";
+
+const cardVariants = {
+  offscreen: {
+    opacity: 0.2,
+    scale: 1,
+    y: 60,
+  },
+  onscreen: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 1.4,
+      ease: [0, 0.31, 0.5, 1.01],
+    },
+    delay: 0,
+    y: 0,
+  },
+};
 
 const features = [
   {
@@ -65,7 +84,13 @@ export default function Example() {
               </dl>
             </div>
           </div>
-          <div className="flex items-start justify-end lg:order-first">
+          <motion.div
+            className="flex items-start justify-end lg:order-first"
+            viewport={{ once: true }}
+            initial="offscreen"
+            whileInView="onscreen"
+            variants={cardVariants}
+          >
             <Image
               src={happy}
               alt="happy"
@@ -73,7 +98,7 @@ export default function Example() {
               width={2432}
               height={1442}
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

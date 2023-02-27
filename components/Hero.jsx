@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import autismcenter from "@/public/arise-autism-center.png";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
@@ -15,15 +16,42 @@ export default function Hero() {
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center"></div>
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+            <motion.h1
+              className="text-4xl font-bold tracking-tight text-white sm:text-6xl"
+              initial={{ scale: 0.9, opacity: 0.2, y: -30 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              transition={{
+                duration: 1.4,
+                ease: [0, 0.31, 0.5, 1.01],
+                delay: 0,
+              }}
+            >
               Helping Every Individual with Autism Reach Their Full Potential
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-300">
+            </motion.h1>
+            <motion.p
+              className="mt-6 text-lg leading-8 text-gray-300"
+              initial={{ scale: 0.2, opacity: 0.2 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{
+                duration: 1,
+                ease: [0, 0.61, 0.2, 1.01],
+                delay: 0.1,
+              }}
+            >
               At Arise Autism Center, we empower individuals to achieve their
               dreams. We provide a safe and nurturing environment for them to
               learn and grow.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
+            </motion.p>
+            <motion.div
+              className="mt-10 flex items-center justify-center gap-x-6"
+              initial={{ scale: 0.2, opacity: 0.2 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{
+                duration: 1,
+                ease: [0, 0.61, 0.2, 1.01],
+                delay: 0.3,
+              }}
+            >
               <Link
                 href="/enrollment-form"
                 className="rounded-full bg-g600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-g500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-450"
@@ -36,7 +64,7 @@ export default function Hero() {
               >
                 Learn more <span aria-hidden="true">→</span>
               </Link>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
