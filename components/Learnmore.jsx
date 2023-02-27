@@ -34,7 +34,7 @@ export default function Learnmore() {
                 Center Based Therapy
               </h3>
               <p className="mt-2 text-base leading-7 text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Join us at our center for a variety of services and programs.
               </p>
               <a
                 href="#"
@@ -76,7 +76,8 @@ export default function Learnmore() {
                 Home Based Therapy
               </h3>
               <p className="mt-2 text-base leading-7 text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                We come to you! Our home based services are designed to meet the
+                clients needs.
               </p>
               <a
                 href="#"
@@ -118,7 +119,7 @@ export default function Learnmore() {
                 Early Intervention
               </h3>
               <p className="mt-2 text-base leading-7 text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Get your child started on the right path with our early.
               </p>
               <a
                 href="#"
