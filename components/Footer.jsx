@@ -4,7 +4,7 @@ const navigation = {
   solutions: [
     { name: "Home ABA Therapy", href: "#" },
     { name: "FBA Treatment Plan", href: "#" },
-    { name: "Center-Based ABA Therapy", href: "#" },
+    { name: "Center-Based ABA", href: "#" },
     { name: "Early Intervention", href: "#" },
     { name: "Functional Assessments", href: "#" },
     { name: "Understandin Autism", href: "#" },
